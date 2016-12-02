@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <main ng-app="myApp">
+
+  <div ng-controller="myApp as app">
+
+    <div class="dropdown">
+
+
+      <h1>{{title}}</h1>
+      <ul ng-click="showHeroes()" class="hero-list">
+        <li class= "list-title">Hero Click</li>
+        <li ng-repeat="hero in heroes track by $index" ng-click="showHeroDetails($index)" class="hero closed">
+          {{hero.name}}
+        </li>
+      </ul>
+    </div>
+
+      <div class="details">
+<!--         <h2 class="closed" ng-repeat="hero in heroes track by $index">
+          My height is {{hero.height}} foot
+        </h2> -->
+        <h2>Height: {{currentHeight}}</h2>
+        <h3>Hair Color:{{currentHair}}</h3>
+<!--         <h3 class="closed" ng-repeat="hero in heroes track by $index">
+          My orientation is {{hero.orientation}}
+        </h3> -->
+      </div>
+
+  </div>
+</main>
+  
+  </body>
+</html>
